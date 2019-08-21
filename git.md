@@ -10,13 +10,13 @@
    - `git commit`: open editor and edit commit message
    - `git add <file_name>; git commit -m "message"`: combine add and commit
    - `git commit -a -m "message"`: combine add and commit
-   - `git log --<file_name>`: shows the log only for the file
+   - `git log -- <file_name>`: shows the log only for the file (MUST include a space after --)
    - `git diff`: ONLY show the tracked files
    - `git diff --staged`: shows the differences between Staging Area and History (after add, before commit)
 ## Undo
 1. `git checkout`, `git reset`
-   - `git checkout --<file_name>`: undo the file in Working Tree (before add)
-   - `git checkout <commit_hash> --<file_name>`: checkout the file from a certain commit (The file will directly be in Staging Area (after add, before commit))
+   - `git checkout -- <file_name>`: undo the file in Working Tree (before add) (MUST include a space after --)
+   - `git checkout <commit_hash> -- <file_name>`: checkout the file from a certain commit (The file will directly be in Staging Area (after add, before commit))
    - `git reset HEAD <file_name>`: undo the files in Staging Area (after add, before commit (still have the modified files)
 2. `git merge --abort`: undo the merge
 3. After push, remove the lastest commit in both local and remote
@@ -84,6 +84,11 @@ $ git push --set-upstream origin new_branch   # Push the new branch, set local b
 5. A new branch is ahead of forked remote
    - `new pull request`
    - send the forked remote a pull request
+## Create Tags
+1. `git tag -a v2.1.0 -m "xyz feature is released in this tag."`: annotated tags
+2. `git tag v2.1.0`: lightweight tags
+3. `git push --tags`: pushs all tags
+4. `git tag`: lists all tags
 # Terminology
 **HEAD**: shows which branch we checked out  
 **origin**: a shorthand name for the remote repository
@@ -100,3 +105,4 @@ $ git config --global alias.adog "log --all --decorate --oneline --graph"
 2. [Introduction to Git - Branching and Merging](https://www.youtube.com/watch?v=FyAAIHHClqI)
 3. [Introduction to Git - Remotes](https://www.youtube.com/watch?v=Gg4bLk8cGNo)
 4. [How to rename git local and remote branches](https://www.w3docs.com/snippets/git/how-to-rename-git-local-and-remote-branches.html)
+5. [Create a tag in a GitHub repository](https://stackoverflow.com/questions/18216991/create-a-tag-in-a-github-repository)
