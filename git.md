@@ -18,7 +18,12 @@
    - `git checkout --<file_name>`: undo the file in Working Tree (before add)
    - `git checkout <commit_hash> --<file_name>`: checkout the file from a certain commit (The file will directly be in Staging Area (after add, before commit))
    - `git reset HEAD <file_name>`: undo the files in Staging Area (after add, before commit (still have the modified files)
-2. `git merge --abort`: undo the merge 
+2. `git merge --abort`: undo the merge
+3. After push, remove the lastest commit in both local and remote
+   ```
+   $ git reset --hard HEAD~1
+   $ git push -f origin master
+   ```
 ## Branch
 1. `git branch`
    - `git branch`: shows branches and which branch is checking out
@@ -80,7 +85,7 @@ $ git push --set-upstream origin new_branch   # Push the new branch, set local b
    - `new pull request`
    - send the forked remote a pull request
 # Terminology
-**HEAD**: shows which branch we checked out
+**HEAD**: shows which branch we checked out  
 **origin**: a shorthand name for the remote repository
 # Git Alises
 ```
