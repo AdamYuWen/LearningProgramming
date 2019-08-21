@@ -1,11 +1,11 @@
 # Class 2-1
 1. Convert NORMAL mode to INSERT mode (a, i, o)
-- `a`: append
-- `i`: insert
-- `o`: open a new line below
-- `A`: append at the end of the line
-- `I`: insert at the beginning of the line
-- `O`: open a new line above
+   - `a`: append
+   - `i`: insert
+   - `o`: open a new line below
+   - `A`: append at the end of the line
+   - `I`: insert at the beginning of the line
+   - `O`: open a new line above
 2. Convert INSERT mode to NORMAL mode (ESC)
 3. `:q` quit
 4. `:wq` written and quit
@@ -34,46 +34,46 @@
 # Class 2-4
 ## NORMAL mode
 1. `h`, `j`, `k`, `l`: left, down, up, right
-2. `w`: beginning of the next word
-3. `W`: beginning of the next word (split by space)
-4. `e`: ending of the next word
-5. `E`: ending of the next word (split by space)
-6. `b`: beginning of the previous word
-7. `B`: beginning of the previous word (split by space)
-8. `f{char}`: find the {char} in the line
-   `F{char}`: find the previous {char} in the line
-   `;`: jump to the next {char}
-   `,`: jump to the previous {char}
-9. `0`: go to the first character in the line
-   `^`: go to the first non-empty character in the line
-   `$`: go to the last character in the line
-   `g_`: go to the last non-empty character in the line
+2. `w`: beginning of the next word  
+   `W`: beginning of the next word (split by space)
+3. `e`: ending of the next word  
+   `E`: ending of the next word (split by space)  
+4. `b`: beginning of the previous word  
+   `B`: beginning of the previous word (split by space)
+5. `f{char}`: find the {char} in the line  
+   `F{char}`: find the previous {char} in the line  
+   `;`: jump to the next {char}  
+   `,`: jump to the previous {char}  
+6. `0`: go to the first character in the line  
+   `^`: go to the first non-empty character in the line  
+   `$`: go to the last character in the line  
+   `g_`: go to the last non-empty character in the line  
    Tips: `0w`: go to the first non-empty character in the line
-10. `gg`: go the beginning of the file
+7. `gg`: go the beginning of the file
     `G`: go to the end of the file
-11. `H/L/M`: Head, Middle, and Lower
-12. `ctrl+u`: last page
-    `ctrl+f`: next page
-    `zz`: put the current line in the middle
-13. `:help (`: check the instruction of "("
+8. `H/L/M`: Head, Middle, and Lower
+9. `ctrl+u`: last page  
+   `ctrl+f`: next page  
+   `zz`: put the current line in the middle
+10. `:help (`: check the instruction of "("
 
 # Class 2-5
 ## NORMAL mode
 1. `x`: delete a character
 2. `d`: delete a word
-3. `num+x/d/dd`: excute delete num of times
-4. `daw`: delete around the word (delete the space)
-5. `diw`: delete in the word (keep the space)
-6. `dd`: delete the line`
-7. `dt)`: delete to ")"
-8. `d$`: delete to the end
-9. `d0`: delete to the beginning
-10. `r{char}`: replace {char} to the current character
-    `R{char}`: replace character by character
-11. `s`: delete (substitute) and convert to INSERT mode
-    `S`: detete the whole line and convert to INSERT mode
-12. `c`: delete (change) and convert to INSERT mode
-    `cw`: change the word
-    `ct"`: change to "
+   - `num+x/d/dd`: excute delete num of times
+   - `daw`: delete around the word (delete the space)
+   - `diw`: delete in the word (keep the space)
+   - `dd`: delete the line`
+   - `dt)`: delete to ")"
+   - `d$`: delete to the end
+   - `d0`: delete to the beginning
+3. `r{char}`: replace {char} to the current character  
+   `R{char}`: replace character by character
+4. `s`: delete (substitute) and convert to INSERT mode  
+   `S`: detete the whole line and convert to INSERT mode  
+5. `c`: delete (change) and convert to INSERT mode (need to work with w, t...)  
+   `cw`: change the word  
+   `ct"`: change to "  
 ## VISUAL mode
-1. `v+l+d`: select then delete
+1. `v+l+d`: start select by v, move to right by l, then delete by d
