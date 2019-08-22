@@ -14,9 +14,11 @@
    - `git diff`: ONLY show the tracked files
    - `git diff --staged`: shows the differences between Staging Area and History (after add, before commit)
 ## Undo
-1. `git checkout`, `git reset`
+1. `git checkout`, `git clean`, `git reset`
    - `git checkout -- <file_name>`: undo the file in Working Tree (before add) (MUST include a space after --)
    - `git checkout <commit_hash> -- <file_name>`: checkout the file from a certain commit (The file will directly be in Staging Area (after add, before commit))
+   - `git checout -f` or `git checkout -- .`: removes all uncommitted changes for tracked files
+   - `git clean -fd`: removes all uncommited changes for untracked files
    - `git reset HEAD <file_name>`: undo the files in Staging Area (after add, before commit (still have the modified files)
 2. `git merge --abort`: undo the merge
 3. After push, remove the lastest commit in both local and remote
@@ -106,3 +108,4 @@ $ git config --global alias.adog "log --all --decorate --oneline --graph"
 3. [Introduction to Git - Remotes](https://www.youtube.com/watch?v=Gg4bLk8cGNo)
 4. [How to rename git local and remote branches](https://www.w3docs.com/snippets/git/how-to-rename-git-local-and-remote-branches.html)
 5. [Create a tag in a GitHub repository](https://stackoverflow.com/questions/18216991/create-a-tag-in-a-github-repository)
+6. [Git ignore local file changes](https://stackoverflow.com/questions/24983762/git-ignore-local-file-changes/24983863)

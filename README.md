@@ -4,6 +4,6 @@
 ## Vim
 1. [Vim Learning from PegasusWang on immoc](https://github.com/AdamYuWen/LearningProgramming/blob/master/Vim_PegasusWang_immoc.md)
 ## Emacs
-1. Zilongshanren YouTube
+1. Zilongshanren YouTube (Spacemacs Rocks)
 ## C++
 1. C++ Prime Plus
