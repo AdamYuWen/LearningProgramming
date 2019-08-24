@@ -77,3 +77,21 @@
    `ct"`: change to "  
 ## VISUAL mode
 1. `v+l+d`: start select by v, move to right by l, then delete by d
+
+# Class 2-6
+## COMMAND mode
+1. `:[range]s[ubstitute]/{pattern}/{string}/[flags]`
+   - range:
+      - `:10,20`: from line 10 to 20
+      - `%`: all
+   - flags:
+      - `g`: global
+      - `c`: confirm
+      - `n`: number (ONLY check the number of time)
+   - examples:
+      - `:% s/self/this/g`
+      - `:1,6 s/self/this/g`
+      - `:1,6 s/self//n`
+      - `:% s/quack/jiao/g`: substitute all quack with jiao, even change a word including quack. e.g. changing "do_quack" to "do_jiao"
+      - `:% s/\<quack\>/jiao/g`: exactly checking "quack". e.g. keep "do_quack" unchanged
+   
