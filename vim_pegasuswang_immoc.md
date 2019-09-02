@@ -7,8 +7,9 @@
    - `I`: insert at the beginning of the line
    - `O`: open a new line above
 2. Convert INSERT mode to NORMAL mode (ESC)
-3. `:q` quit
-4. `:wq` written and quit
+3. `:q`: quit
+4. `:wq`: written and quit
+5. `:e!`: edits but discard any changes to the current buffer
 
 # Class 2-2
 ## COMMAND mode
@@ -94,4 +95,48 @@
       - `:1,6 s/self//n`
       - `:% s/quack/jiao/g`: substitute all quack with jiao, even change a word including quack. e.g. changing "do_quack" to "do_jiao"
       - `:% s/\<quack\>/jiao/g`: exactly checking "quack". e.g. keep "do_quack" unchanged
-   
+
+# Class 2-7
+## COMMAND mode
+1. `:ls`: shows all buffers  
+   `:e b.txt`: edits "b.txt" file
+   `b 1`: jumps to the first buffer  
+   `b c.txt`: jumpts to the buffer with the file named "c.txt"
+2. Window
+   - `<Ctrl+w> s`: same as `:sp`
+   - `<Ctrl+w> v`: same as `:vs`
+   - `<Ctrl+w> w`: jumps to the next window
+   - `<Ctrl+w> h/j/k/l`: jumps to the left/below/above/right window
+   - `<Ctrl+w> H/J/K/L`: moves the window to left/below/above/right
+3. Tab
+   - `:tabnew duck.py`: opens a new tab with duck.py file
+   - `:vs hello.py`: opens the hello.py file in the same tab
+   - `gt`: jumps to the next tab
+
+# Class 2-8
+1. [number]<command>[text object]
+   - number: the number of times for the command
+   - command: d(delete), c(change), y(yank)
+   - text object: w(word), s(sentence), p(paragraph)
+
+# Class 2-9
+## NORMAL mode
+1. Copy and Paste
+   - v(visual): select
+   - y(yank): copy
+   - p(put): paste
+   - d(delete): cut
+2. yiw(copy a word), yy(copy a line) 
+## INSERT mode
+1. Copy and Paste
+   - `Ctrl+v`
+2. Within _autoindent_, fix the bug by using `:set paste` && `:set nopaste`
+## Register
+1. `"ayiw`: using register "a" to copy the word
+2. `"bdd`: using register "b" for the deleted line
+3. `:reg a`: checks what are in the register "a"
+4. `"0`: register that only for copy
+5. `"+`: copies to the system clipboard
+   - `:echo has('clipboard')`: checks if vim support system clipboard
+      - "1" means support, "0" means not
+   - `:set clipboard=unnamed`: set clipboard works with unnamed register
