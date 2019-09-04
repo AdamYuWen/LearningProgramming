@@ -38,7 +38,8 @@
      - fast-forward merge: If the branch has a direct path the the master, git will move master and HEAD to the merged branch.
      - 3-Way merge (`git merge <branch_name> --no-ff`)
    - `git branch --merged`: checks which branches are merged
-   - `git branch -d <branch_name>`: delete branches
+   - `git branch -d <branch_name>`: deletes local branches
+   - `git branch origin --delete <branch_name>`: deletes remote branches
    - `git merge --abort`: undo the merge
 3. `git stash`
    - Modified some files and want to check out another branch, so save the modified files into stash. (It can be done many times.)
