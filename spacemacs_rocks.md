@@ -35,3 +35,21 @@
 1. `C-x C-r`: opens recent files
 2. `C-s` after `M-x <command>`: switches to the next option
 ### Reference: [Spacemacs Rock Day 2](https://www.youtube.com/watch?v=l6TzOIlS8Ec&list=PLqQgufb9_uJeSg3ChhgcDHD9C5MbZSCal&index=4)
+
+## Day 3:
+### Reference: [Spacemacs Rock Day 3](https://www.youtube.com/watch?v=hL9B2AtcB1w&list=PLqQgufb9_uJeSg3ChhgcDHD9C5MbZSCal&index=5)
+
+## Day 4:
+1. `s-/`: (left command) hipple-expand (another way of completion)
+2. Dired mode
+   - `C-x d`: runs dired
+   - `+`: creates directory
+   - `C-x C-f`: creates a file
+   - `g`: refreshs dired buffer
+   - `C`: copies a file
+   - `d`: deletes a file
+   - `D`: deletes a file after confirmation
+   - `R`: renames a file
+   - `x`: execute
+   - `C-x C-j`: opens current folder
+### Reference: [Spacemacs Rock Day 4](https://www.youtube.com/watch?v=IhCOO0R83G8&list=PLqQgufb9_uJeSg3ChhgcDHD9C5MbZSCal&index=3)
