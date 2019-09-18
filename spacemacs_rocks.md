@@ -20,6 +20,7 @@
    - `<s tab`: adds "#+BEGIN_SRC" and "#+END_SRC"
    - `C-c C-s`: schedule an event
    - `C-c C-d`: set a deadline for an event
+   - `M-RET`: auto correct built point numbers
 2. `M-x eval-buffer`: execute the whole buffer
 3. `M-x package-list-packages`: opens the package list
    - `i`: install
@@ -53,3 +54,65 @@
    - `x`: execute
    - `C-x C-j`: opens current folder
 ### Reference: [Spacemacs Rock Day 4](https://www.youtube.com/watch?v=IhCOO0R83G8&list=PLqQgufb9_uJeSg3ChhgcDHD9C5MbZSCal&index=3)
+
+## Day 5:
+1. Occur mode
+   - `C-c o`: finds out when words occur
+   - After finding all words, `e` to enter the Occur-Edit mode
+   - After editing, `C-c C-c` to exit the Occur-Edit mode
+2. counsel-imenu
+   - `C-c i`: searchs function names
+3. expand-region
+   - `C-=`: selects region
+   - `+`: expand 
+   - `-`: contract (`+` only, no `C` with it)
+   - `0`: reset
+4. iedit mode
+   - `C-;`: starts iedit
+### Reference: [Spacemacs Rock Day 5](https://www.youtube.com/watch?v=Tjh5cKAw1Ks&list=PLqQgufb9_uJeSg3ChhgcDHD9C5MbZSCal&index=6)
+
+## Day 6:
+1. Org mode
+   - `C-c C-s`: schedule an event
+   - `C-c C-d`: deadline of an event
+   - `C-c a a`: opens the agenda
+   - `r`: refresh
+   - `d`: the daily agenda
+   - `w`: the week agenda
+   - `C-c r`: creates a TODO by using TODO template
+2. Org-pomodoro mode
+   - `C-a a`: starts the agenda
+   - `n` or `p`: to the target task
+   - `M-x org-pomodoro`: starts org-pomodoro
+3. Dired mode
+   - `Shift-6`: returns to the parent folder
+   - `g`: refreshs dired buffer
+   - `C-x C-q`, then `C-=` to select the title, then `C-;` to modify more than one file's name
+4. Helm-ag
+   - Install ag
+   - `C-c p s`: searchs by using ag
+   - `!`: do not include (similar with gitignore)
+   - After searching, `C-c C-e` starts edit in different files
+5. flycheck and eslint
+   - `npm install -g eslint`: install eslint
+   - `C-c ! l`: shows the list of errors
+6. auto yasnippets
+   - Would like to type as following
+   ```
+   (add-to-listAA 'pathAA 'xxxAA)
+   (add-to-listBB 'pathBB 'xxxBB)
+   (add-to-listCC 'pathCC 'xxxCC)
+   ```
+   - (add-to-list~AA 'path~AA 'xxx~AA)
+   - `C-c w`: creates auto-yasnippet template, "~" will be removed automaticlly
+   - `C-c e`: pastes the template
+   - Then, type "BB"
+   - `C-c e`, then type "CC"
+
+## Day 7:
+1. `C-w`: deletes a word
+2. `C-z`: switches between emacs and vim modes (vim has to be in the NORMAL mode)
+3. vim mode
+   - `C-w h`: switches to the left window
+   - `C-w l`: switches to the right window
+   - 'hello', change it to "hello": within hello, `cs'"` (Shift+9, includes spaces; Shift+0, NOT includes spaces)
