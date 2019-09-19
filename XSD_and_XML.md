@@ -25,7 +25,8 @@
     <plant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="plants.xsd">
     <!-- start the root element -->
-    <!-- link to the XSD file. Since the XSD file at the same location as the XML file, there is no path in this case. -->
+    <!-- Self Notes: link to the XSD file.
+	Since the XSD file at the same location as the XML file, there is no path in this case. -->
         <!-- All payload data belongs here -->
     <genus>Cercis</genus> <!-- a child element called genus and the content is Cercis -->
 </plant>
@@ -39,7 +40,8 @@
 	<xs:complexType> <!-- the children elements are complexType -->
 		<xs:sequence> <!-- the children must follow the sequence -->
 			<xs:element name="genus" type="xs:string"/>
-			<xs:element name="species" type="xs:string"/ minOccurs="0"> <!-- minOccurs="0" means the element is not required -->
+			<xs:element name="species" type="xs:string"/ minOccurs="0">
+			<!-- Self Notes: minOccurs="0" means the element is not required -->
 			<xs:element name="common_name" type="xs:string"/ minOccurs="0">
 			<xs:element name="cultivar" type="xs:string"/ minOccurs="0">
 		</xs:sequence>
@@ -54,10 +56,13 @@
 	<xs:element name="plant">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="genus"> <!-- change single line to multiple lines of element -->
+				<xs:element name="genus">
+				<!-- Self Notes: change single line to multiple lines of element -->
 					<xs:simpleType>
-						<xs:restriction base="xs:string"> <!-- add restrictions -->
-							<xs:maxLength value="60"/> <!-- max length of a string is 60 -->
+						<xs:restriction base="xs:string">
+						<!-- Self Notes: add restrictions -->
+							<xs:maxLength value="60"/>
+							<!-- Self Notes: max length of a string is 60 -->
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -85,7 +90,8 @@
 				<xs:element name="height" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:integer">
-							<xs:maxInclusive value="100"/> <!-- max number of an integer is 100 -->
+							<xs:maxInclusive value="100"/>
+							<!-- Self Notes: max number of an integer is 100 -->
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -95,4 +101,23 @@
 </xs:schema>
 
 ```
-## 5. 
+## 5. Using date, boolean, and default in XSD to validate XML
+1. Set default values
+```xml
+<xs:element name="height" minOccurs="0" default="0">
+	<!-- Self Notes: set default value as 0 -->
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
+```
+2. Set type to date
+```xml
+<xs:element name="begin_bloom_date" type="xs:date" minOccurs="0"/> 
+```
+3. Set type to boolean
+```xml
+<xs:element name="edible" type="xs:boolean" minOccurs="0"/>
+```
