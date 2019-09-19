@@ -13,7 +13,7 @@
 1. XSD sample file
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="plant"> <!-- plant is the root element -->
 	    <!-- XSD validation rules go inside this xs:element tag-->
     </xs:element>
@@ -21,32 +21,33 @@
 ```
 2. XML sample file
 ```xml
-<?xml version="2.0"?>
-    <plant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="plants.xsd">
+<?xml version="1.0"?>
+<plant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="plants.xsd">
     <!-- start the root element -->
     <!-- Self Notes: link to the XSD file.
 	Since the XSD file at the same location as the XML file, there is no path in this case. -->
-        <!-- All payload data belongs here -->
+    <!-- All payload data belongs here -->
     <genus>Cercis</genus> <!-- a child element called genus and the content is Cercis -->
 </plant>
-
 ```
 ## 3. Add simple rules to an XSD, validate XML file
 1. XSD sample file
 ```xml
-<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name="plant">
-	<xs:complexType> <!-- the children elements are complexType -->
-		<xs:sequence> <!-- the children must follow the sequence -->
-			<xs:element name="genus" type="xs:string"/>
-			<xs:element name="species" type="xs:string"/ minOccurs="0">
-			<!-- Self Notes: minOccurs="0" means the element is not required -->
-			<xs:element name="common_name" type="xs:string"/ minOccurs="0">
-			<xs:element name="cultivar" type="xs:string"/ minOccurs="0">
-		</xs:sequence>
-	</xs:complexType>
-</xs:element></xs:schema>
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="plant">
+		<xs:complexType> <!-- the children elements are complexType -->
+			<xs:sequence> <!-- the children must follow the sequence -->
+				<xs:element name="genus" type="xs:string"/>
+				<xs:element name="species" type="xs:string" minOccurs="0"/>
+				<!-- Self Notes: minOccurs="0" means the element is not required -->
+				<xs:element name="common_name" type="xs:string" minOccurs="0"/>
+				<xs:element name="cultivar" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
 ```
 ## 4. Specify max length in XSD, max number for an integer
 1. XSD sample file
@@ -91,7 +92,9 @@
 					<xs:simpleType>
 						<xs:restriction base="xs:integer">
 							<xs:maxInclusive value="100"/>
-							<!-- Self Notes: max number of an integer is 100 -->
+							<!-- Self Notes: max number of an integer is 100.
+							maxInclusive means including 100.
+							maxExclusive means not including 100. -->
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -99,7 +102,6 @@
 		</xs:complexType>
 	</xs:element>
 </xs:schema>
-
 ```
 ## 5. Using date, boolean, and default in XSD to validate XML
 1. Set default values
@@ -115,9 +117,23 @@
 ```
 2. Set type to date
 ```xml
-<xs:element name="begin_bloom_date" type="xs:date" minOccurs="0"/> 
+<xs:element name="begin_bloom_date" type="xs:date" minOccurs="0"/>
 ```
 3. Set type to boolean
 ```xml
 <xs:element name="edible" type="xs:boolean" minOccurs="0"/>
+```
+## 6. Use xs:enumeration in XSD to restrict values in XML doc
+1. Set type to enumeration
+```xml
+<xs:element name="sun_tolerance">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="full_sun"/>
+			<xs:enumeration value="part_sun"/>
+			<xs:enumeration value="part_shade"/>
+			<xs:enumeration value="full_shade"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:element>
 ```
