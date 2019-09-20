@@ -104,7 +104,7 @@
 </xs:schema>
 ```
 ## 5. Using date, boolean, and default in XSD to validate XML
-1. Set default values
+1. Set default values (XSD)
 ```xml
 <xs:element name="height" minOccurs="0" default="0">
 	<!-- Self Notes: set default value as 0 -->
@@ -115,16 +115,16 @@
 	</xs:simpleType>
 </xs:element>
 ```
-2. Set type to date
+2. Set type to date (XSD)
 ```xml
 <xs:element name="begin_bloom_date" type="xs:date" minOccurs="0"/>
 ```
-3. Set type to boolean
+3. Set type to boolean (XSD)
 ```xml
 <xs:element name="edible" type="xs:boolean" minOccurs="0"/>
 ```
 ## 6. Use xs:enumeration in XSD to restrict values in XML doc
-1. Set type to enumeration
+1. Set type to enumeration (XSD)
 ```xml
 <xs:element name="sun_tolerance">
 	<xs:simpleType>
@@ -137,3 +137,61 @@
 	</xs:simpleType>
 </xs:element>
 ```
+## 7. Define our own type in XSD, create repeating group
+1. Define a new type (XSD)
+```xml
+<xs:complexType name="specimenType">
+<!-- Self Notes: Self defined type -->
+	<xs:sequence>
+		<xs:element name="latitude" type="xs:decimal" minOccurs="0"/>
+		<xs:element name="longitude" type="xs:decimal" minOccurs="0"/>
+		<xs:element name="planted_by" minOccurs="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="comments" minOccurs="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="1024"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+	</xs:sequence>
+</xs:complexType>
+```
+2. Use self defined type and create repeating group (XSD)
+```xml
+<xs:element name="specimens" minOccurs="0">
+<!-- Self Notes: Here is our own type -->
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="specimen" type="specimenType"
+			minOccurs="1" maxOccurs="unbounded"/>
+			<!-- Self Notes: "specimens" is not require.
+			However, once "specimens" includes, at least
+			one specimen should have. -->
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+```
+3. Sample XML file
+```xml
+<specimen>
+	<latitude>39.47</latitude>
+	<longitude>-84.51</longitude>
+	<planted_by>Brandan Jones</planted_by>
+	<comments>Beautiful tree!</comments>
+</specimen>
+<specimen>
+	<latitude>52.40</latitude>
+	<longitude>1.00</longitude>
+	<planted_by>Joe Bloggs</planted_by>
+	<comments>RBG Kew</comments>
+</specimen>
+```
+## 8. Overview and Discussion of XPath
+1. [Formating xml](https://codebeautify.org/xmlviewer)
+2. [Online XPath](https://www.freeformatter.com/xpath-tester.html)
