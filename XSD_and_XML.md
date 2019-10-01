@@ -195,3 +195,23 @@
 ## 8. Overview and Discussion of XPath
 1. [Formating xml](https://codebeautify.org/xmlviewer)
 2. [Online XPath](https://www.freeformatter.com/xpath-tester.html)
+## 9. XPath examples and demonstrations in XML
+1. XPath examples
+   - `/plant/specimens`
+   - `/plant/specimens/specimen[1]`
+   - `/plant/specimens/specimen[last()]`
+   - `/plant/specimens/specimen[latitude>0]`
+   - `/plant/specimens/specimen[latitude>50]/../..`
+2. Not sure about where it is
+   - `//latitude`
+   - `//..[latitude>0]/latitude`: Don't know about the parenet, get latitude only when latitude > 0
+## 10. Overview of XSLT
+1. Steps from XML to XSL
+   1. Start with an XML document.
+   2. Create and XSL document that contains the desired destination format.
+   3. Reference the XSL file from the XML file.
+   4. Use XPath to pull XML into XSL.
+   5. Open the XML file in a browser.
+## 11. Transform XML to HTML by using XSL/XSLT
+## 12. Uploading and Saving a file in C# .net; Validating XML
+## 13. Validating XML against XSD in C# using XmlREader
