@@ -62,6 +62,11 @@ long fib_recursion(int n) {
 	}
 }
 
+int fibRecerive(int n) {
+	if (n == 0 || n == 1) return n;
+	return fibRecerive(n - 1) + fibRecerive(n - 2);
+}
+
 // Recursion and stores all values.
 // Time Complexity: O(n)
 // Space Complexity: O(n)
@@ -78,6 +83,15 @@ long fib_recursion_memorization(int n) {
 		allFib[n] = res;
 		return res;
 	}
+}
+
+int fibReceriveMemory(int n) {
+	static unordered_map<int, int> m;
+	m[0] = 0;
+	m[1] = 1;
+	if (m.find(n) == m.end())
+		m[n] = fibReceriveMemory(n - 1) + fibReceriveMemory(n - 2);
+	return m[n];
 }
 
 int main() {
