@@ -17,7 +17,7 @@
 1. `git checkout`, `git clean`, `git reset`
    - `git checkout -- <file_name>`: undo the file in Working Tree (before add) (MUST include a space after --)
    - `git checkout <commit_hash> -- <file_name>`: checkout the file from a certain commit (The file will directly be in Staging Area (after add, before commit))
-   - `git checout -f` or `git checkout -- .`: removes all uncommitted changes for tracked files
+   - `git checkout -f` or `git checkout -- .`: removes all uncommitted changes for tracked files
    - `git clean -fd`: removes all uncommited changes for untracked files
    - `git reset HEAD <file_name>`: undo the files in Staging Area (after add, before commit (still have the modified files)
 2. `git merge --abort`: undo the merge
