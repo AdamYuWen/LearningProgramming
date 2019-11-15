@@ -109,3 +109,24 @@ for t in triangles():
 for t in results:
     print(t)
 ```
+## Functional Programming
+### map/reduce Exercise 1
+```python
+def normalize(name):
+    return name[0].upper() + name[1:].lower()
+
+L1 = ['adam', 'LISA', 'barT']
+L2 = list(map(normalize, L1))
+print(L2)
+```
+### map/reduce Exercise 2
+```python
+from functools import reduce
+def prod(L):
+    def fn(x, y):
+        return x * y
+
+    return reduce(fn, L)
+
+print('3 * 5 * 7 * 9 = ', prod([3, 5, 7, 9]))
+```
