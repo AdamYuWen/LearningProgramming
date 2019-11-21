@@ -39,7 +39,7 @@
      - 3-Way merge (`git merge <branch_name> --no-ff`)
    - `git branch --merged`: checks which branches are merged
    - `git branch -d <branch_name>`: deletes local branches
-   - `git branch origin --delete <branch_name>`: deletes remote branches
+   - `git push origin --delete <branch_name>`: deletes remote branches
    - `git merge --abort`: undo the merge
 3. `git stash`
    - Modified some files and want to check out another branch, so save the modified files into stash. (It can be done many times.)
@@ -110,3 +110,4 @@ $ git config --global alias.adog "log --all --decorate --oneline --graph"
 4. [How to rename git local and remote branches](https://www.w3docs.com/snippets/git/how-to-rename-git-local-and-remote-branches.html)
 5. [Create a tag in a GitHub repository](https://stackoverflow.com/questions/18216991/create-a-tag-in-a-github-repository)
 6. [Git ignore local file changes](https://stackoverflow.com/questions/24983762/git-ignore-local-file-changes/24983863)
+7. [How can I delete branches in Git?](https://www.git-tower.com/learn/git/faq/delete-remote-branch)
