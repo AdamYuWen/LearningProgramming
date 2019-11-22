@@ -63,6 +63,7 @@ $ git push --set-upstream origin new_branch   # Push the new branch, set local b
 1. `git rm`, `git mv`
    - `git rm <file_name>`: removes files from Working Tree **and** Staging Area (NOT commit yet)
    - `git mv <old_file_name> <new_file_name>`: changes file name
+   - `for f in * ; do git mv -- "$f" "0$f" ; done`: adds prefix ("0" for this case) to all files (works in Git BASH)
 ## Work with Remotes
 1. `git fetch`, `git pull`, `git push`, `git remote`
    - `git fetch origin`: finds new commits and brings them down
