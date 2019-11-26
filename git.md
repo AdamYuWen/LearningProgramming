@@ -40,6 +40,7 @@
    - `git branch --merged`: checks which branches are merged
    - `git branch -d <branch_name>`: deletes local branches
    - `git push origin --delete <branch_name>`: deletes remote branches
+   - `git fetch --all -prune`: after deleting remote branches, updated the branches on other machines (It only update branches. It won't delete local branches.)
    - `git merge --abort`: undo the merge
 3. `git stash`
    - Modified some files and want to check out another branch, so save the modified files into stash. (It can be done many times.)
