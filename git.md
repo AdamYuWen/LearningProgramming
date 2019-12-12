@@ -73,6 +73,7 @@ $ git push --set-upstream origin new_branch   # Push the new branch, set local b
    - `git remote`: shows origin
    - `git remote -v`: shows full locations
    - `git push origin master`
+   - `git push -u origin <branch_name>`: push local branch to remote
 2. `git remote`
    - `git remote add <remote_name, e.g. upstream> <git_SSH>`
    - `git remote -v`
