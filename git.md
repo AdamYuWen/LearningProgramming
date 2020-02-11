@@ -20,6 +20,7 @@
    - `git checkout -f` or `git checkout -- .`: removes all uncommitted changes for tracked files
    - `git clean -fd`: removes all uncommited changes for untracked files
    - `git reset HEAD <file_name>`: undo the files in Staging Area (after add, before commit (still have the modified files)
+   - `git fetch --all`, `git reset --hard origin/master`, `git pull`: undo local files and download files from remote (after commit, before push)
 2. `git merge --abort`: undo the merge
 3. After push, remove the lastest commit in both local and remote
    ```
