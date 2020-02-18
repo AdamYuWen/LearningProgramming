@@ -14,10 +14,10 @@
    - `git diff`: ONLY show the tracked files
    - `git diff --staged`: shows the differences between Staging Area and History (after add, before commit)
 ## Undo
-1. `git checkout .` or `git reset --hard`: before add
-   `git reset` and `git checkout .` or `git reset --hard`: after add (After `git reset`, move files to before add (have the modified files). After `git checkout .`, remove all changes.) (`git reset --hard` conbine previous two steps)
-   `git reset --hard origin/master`: after commit
-   `git reset --hard HEAD~1` and `git push -f`: after push, remove the latest commit in both local and remote
+1. - `git checkout .` or `git reset --hard`: before add
+   - `git reset` and `git checkout .` or `git reset --hard`: after add (After `git reset`, move files to before add (have the modified files). After `git checkout .`, remove all changes.) (`git reset --hard` conbine previous two steps)
+   - `git reset --hard origin/master`: after commit
+   - `git reset --hard HEAD~1` and `git push -f`: after push, remove the latest commit in both local and remote
 2. `git checkout`, `git clean`, `git reset`
    - `git checkout -- <file_name>`: undo the file in Working Tree (before add) (MUST include a space after --)
    - `git checkout <commit_hash> -- <file_name>`: checkout the file from a certain commit (The file will directly be in Staging Area (after add, before commit))
