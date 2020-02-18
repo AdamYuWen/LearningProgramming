@@ -14,19 +14,18 @@
    - `git diff`: ONLY show the tracked files
    - `git diff --staged`: shows the differences between Staging Area and History (after add, before commit)
 ## Undo
-1. `git checkout`, `git clean`, `git reset`
+1. `git checkout .` or `git reset --hard`: before add
+   `git reset` and `git checkout .` or `git reset --hard`: after add (After `git reset`, move files to before add (have the modified files). After `git checkout .`, remove all changes.) (`git reset --hard` conbine previous two steps)
+   `git reset --hard origin/master`: after commit
+   `git reset --hard HEAD~1` and `git push -f`: after push, remove the latest commit in both local and remote
+2. `git checkout`, `git clean`, `git reset`
    - `git checkout -- <file_name>`: undo the file in Working Tree (before add) (MUST include a space after --)
    - `git checkout <commit_hash> -- <file_name>`: checkout the file from a certain commit (The file will directly be in Staging Area (after add, before commit))
    - `git checkout -f` or `git checkout -- .`: removes all uncommitted changes for tracked files
    - `git clean -fd`: removes all uncommited changes for untracked files
    - `git reset HEAD <file_name>`: undo the files in Staging Area (after add, before commit (still have the modified files)
    - `git fetch --all`, `git reset --hard origin/master`, `git pull`: undo local files and download files from remote (after commit, before push)
-2. `git merge --abort`: undo the merge
-3. After push, remove the lastest commit in both local and remote
-   ```
-   $ git reset --hard HEAD~1
-   $ git push -f origin master
-   ```
+3. `git merge --abort`: undo the merge
 ## Branch
 1. `git branch`
    - `git branch`: shows branches and which branch is checking out
