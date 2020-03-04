@@ -9,10 +9,23 @@
    - `git commit -m "message"`: create a short commit message
    - `git commit`: open editor and edit commit message
    - `git add <file_name>; git commit -m "message"`: combine add and commit
-   - `git commit -a -m "message"`: combine add and commit
+   - `git commit -am "message"`: combine add and commit
    - `git log -- <file_name>`: shows the log only for the file (MUST include a space after --)
    - `git diff`: ONLY show the tracked files
    - `git diff --staged`: shows the differences between Staging Area and History (after add, before commit)
+## Rewriting Git History
+1. Amend: `git add .` and `git commit --amend --no-edit`
+2. Reword: `git rebase -i HEAD~3` and change "pick" to "reword" (i means interactive)
+3. Delete: `git rebase -i HEAD~3` and change "pick" to "drop"
+4. Reorder: `git rebase -i HEAD~3` and change the order of commits
+5. Squash: `git rebase -i HEAD~3` and change "pick" to "fixup"
+6. Split:
+   - `git rebase -i HEAD~3`
+   - change "pick" to "edit"
+   - `git reset HEAD^`
+   - `git add <file_name>`
+   - `git commit -m "message"`
+   - Redo last two items
 ## Undo
 1. - `git checkout .` or `git reset --hard`: before add
    - `git reset` and `git checkout .` or `git reset --hard`: after add (After `git reset`, move files to before add (have the modified files). After `git checkout .`, remove all changes.) (`git reset --hard` conbine previous two steps)
@@ -114,3 +127,4 @@ $ git config --global alias.adog "log --all --decorate --oneline --graph"
 5. [Create a tag in a GitHub repository](https://stackoverflow.com/questions/18216991/create-a-tag-in-a-github-repository)
 6. [Git ignore local file changes](https://stackoverflow.com/questions/24983762/git-ignore-local-file-changes/24983863)
 7. [How can I delete branches in Git?](https://www.git-tower.com/learn/git/faq/delete-remote-branch)
+8. [Rewriting Git History - Amend, Reword, Delete, Reorder, Squash and Split](https://www.youtube.com/watch?v=ElRzTuYln0M)
