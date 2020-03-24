@@ -9,3 +9,4 @@
 ## Python
 1. [Liaoxue Feng Python Tutorial](https://github.com/AdamYuWen/LearningProgramming/blob/master/Liaoxue%20Feng%20Python%20Tutorial%20Exercises.ipynb)
 2. [Python 3.4 Programming Tutorials](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%203.4%20Programming%20Tutorials.ipynb)
+3. [Python Programming Beginner Tutorials (1-9)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Programming%20Beginner%20Tutorials%20(1-9).ipynb)
