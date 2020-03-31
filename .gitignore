@@ -1,1 +1,5 @@
+# ignore checkpoints of iPythonNotebook
 .ipynb_checkpoints
+
+# ignore data files for Pandas
+/Python Data/developer_survey_2019
