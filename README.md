@@ -13,4 +13,5 @@
 4. [Python Programming Beginner Tutorials (10-20)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Programming%20Beginner%20Tutorials%20(10-20).ipynb)
 5. [Python Programming Beginner Tutorials (21-26)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Programming%20Beginner%20Tutorials%20(21-26).ipynb)
 6. [Python Pandas Tutorial (1-5)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Pandas%20Tutorial%20(1-5).ipynb)
-6. [Python Pandas Tutorial (6-11)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Pandas%20Tutorial%20(6-11).ipynb)
+7. [Python Pandas Tutorial (6-11)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Pandas%20Tutorial%20(6-11).ipynb)
+8. [Python Matplotlib Tutorial](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Matplotlib%20Tutorial.ipynb)
