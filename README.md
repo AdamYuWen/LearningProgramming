@@ -24,3 +24,4 @@
 9. [Python Pandas Tutorial (1-5)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Pandas%20Tutorial%20(1-5).ipynb)
 10. [Python Pandas Tutorial (6-11)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Pandas%20Tutorial%20(6-11).ipynb)
 11. [Python Matplotlib Tutorial](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20Matplotlib%20Tutorial.ipynb)
+12. [Python GUI with Tkinter Playlist](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python%20GUI%20with%20Tkinter%20Playlist.ipynb)
