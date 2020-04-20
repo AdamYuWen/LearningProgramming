@@ -29,3 +29,4 @@
 11. [Python Matplotlib Tutorial](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Python%20Matplotlib%20Tutorial.ipynb)
 ### Python GUI
 12. [Python GUI with Tkinter Playlist](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Python%20GUI%20with%20Tkinter%20Playlist.ipynb)
+13. [Automate Microsoft Excel with xlwings in Python](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Automate%20Microsoft%20Excel%20with%20xlwings%20in%20Python.ipynb)
