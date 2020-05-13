@@ -35,6 +35,7 @@
 ### R Tutorial
 1. [R tutorial - Learn R Programming](https://github.com/AdamYuWen/LearningProgramming/blob/master/R/R%20tutorial%20-%20Learn%20R%20Programming.ipynb)
 2. [R Programming](https://github.com/AdamYuWen/LearningProgramming/blob/master/R/R%20Programming.ipynb)
+3. [Data Science with R - R Programming for Data Science - MarinStatsLectures](https://github.com/AdamYuWen/LearningProgramming/blob/master/R/Data%20Science%20with%20R%20-%20R%20Programming%20for%20Data%20Science%20-%20MarinStatsLectures.ipynb)
 ## Ongoing
 - [ ] Python Programming Beginner Tutorials (21-26)
 - [ ] Matplotlib Tutorial Series - Graphing in Python
