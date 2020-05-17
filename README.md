@@ -27,15 +27,18 @@
 9. [Python Pandas Tutorial (1-5)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Python%20Pandas%20Tutorial%20(1-5).ipynb)
 10. [Python Pandas Tutorial (6-11)](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Python%20Pandas%20Tutorial%20(6-11).ipynb)
 11. [Python Matplotlib Tutorial](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Python%20Matplotlib%20Tutorial.ipynb)
+12. [Matplotlib Tutorial Series - Graphing in Python](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Matplotlib%20Tutorial%20Series%20-%20Graphing%20in%20Python.ipynb)
 ### Python GUI
-12. [Python GUI with Tkinter Playlist](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Python%20GUI%20with%20Tkinter%20Playlist.ipynb)
-13. [Automate Microsoft Excel with xlwings in Python](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Automate%20Microsoft%20Excel%20with%20xlwings%20in%20Python.ipynb)
-14. [Creating Excel files with Python and XlsxWriter](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/XlsxWriter.pdf)
+13. [Python GUI with Tkinter Playlist](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Python%20GUI%20with%20Tkinter%20Playlist.ipynb)
+14. [Automate Microsoft Excel with xlwings in Python](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/Automate%20Microsoft%20Excel%20with%20xlwings%20in%20Python.ipynb)
+15. [Creating Excel files with Python and XlsxWriter](https://github.com/AdamYuWen/LearningProgramming/blob/master/Python/XlsxWriter.pdf)
 ## R
 ### R Tutorial
 1. [R tutorial - Learn R Programming](https://github.com/AdamYuWen/LearningProgramming/blob/master/R/R%20tutorial%20-%20Learn%20R%20Programming.ipynb)
 2. [R Programming](https://github.com/AdamYuWen/LearningProgramming/blob/master/R/R%20Programming.ipynb)
+### R for Data Science
 3. [Data Science with R - R Programming for Data Science - MarinStatsLectures](https://github.com/AdamYuWen/LearningProgramming/blob/master/R/Data%20Science%20with%20R%20-%20R%20Programming%20for%20Data%20Science%20-%20MarinStatsLectures.ipynb)
 ## Ongoing
+- [ ] Liaoxue Feng Python Tutorial
 - [ ] Python Programming Beginner Tutorials (21-26)
 - [ ] Matplotlib Tutorial Series - Graphing in Python
