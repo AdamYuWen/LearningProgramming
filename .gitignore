@@ -3,3 +3,4 @@
 
 # ignore data files for Pandas
 /Python/Python Data/developer_survey_2019
+.Rproj.user
