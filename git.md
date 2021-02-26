@@ -39,6 +39,9 @@
    - `git reset HEAD <file_name>`: undo the files in Staging Area (after add, before commit (still have the modified files)
    - `git fetch --all`, `git reset --hard origin/master`, `git pull`: undo local files and download files from remote (after commit, before push)
 3. `git merge --abort`: undo the merge
+4. `git reset --soft HEAD~1`: remove previous commit and back to after add
+5. `git reset --hard HEAD~1`: remove previous commit and remove all changes
+6. `git reset --mixed HEAD~1`: remove previous commit and back to before add
 ## Branch
 1. `git branch`
    - `git branch`: shows branches and which branch is checking out
@@ -128,3 +131,4 @@ $ git config --global alias.adog "log --all --decorate --oneline --graph"
 6. [Git ignore local file changes](https://stackoverflow.com/questions/24983762/git-ignore-local-file-changes/24983863)
 7. [How can I delete branches in Git?](https://www.git-tower.com/learn/git/faq/delete-remote-branch)
 8. [Rewriting Git History - Amend, Reword, Delete, Reorder, Squash and Split](https://www.youtube.com/watch?v=ElRzTuYln0M)
+9. [How To Undo Last Git Commit](https://devconnected.com/how-to-undo-last-git-commit/)
