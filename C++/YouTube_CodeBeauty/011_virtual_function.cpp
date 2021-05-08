@@ -15,6 +15,7 @@ class Instrument {
 
 class Accordion : public Instrument {
   public:
+    // It's great to write virtual in the derived classes.
     virtual void MakeSound() { cout << "Accordion playing ..." << endl; }
 };
 
