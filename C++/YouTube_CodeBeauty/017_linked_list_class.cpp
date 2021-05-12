@@ -25,7 +25,35 @@ class LinkedList {
         }
     }
 
-    void Insert(int value) {
+    void InsertFront(int value) {
+        Node* new_ptr = new Node;
+        new_ptr->value_ = value;
+        new_ptr->next_ = head_;
+        head_ = new_ptr;
+    }
+
+    // If the target doesn't exist, insert to the end.
+    void InsertAfter(int value, int target) {
+        Node* curr = head_;
+        if (curr != NULL) { // if the list is not empty
+            while (curr != NULL) {
+                if (curr->value_ == target) { // find the target
+                    Node* new_ptr = new Node;
+                    new_ptr->value_ = value;
+                    new_ptr->next_ = curr->next_;
+                    curr->next_ = new_ptr;
+                    return;
+                }
+                curr = curr->next_;
+            }
+            // Didn't find the target.
+            InsertEnd(value);
+        } else { // if the list is empty
+            InsertFront(value);
+        }
+    }
+
+    void InsertEnd(int value) {
         // Create a new Node
         Node* new_ptr = new Node;
         new_ptr->value_ = value;
@@ -63,12 +91,13 @@ class LinkedList {
 int main() {
     LinkedList ll;
 
-    cout << "Please enter a value: ";
-    int val;
-    while (cin >> val) {
-        ll.Insert(val);
-        cout << "Please enter a value: ";
-    }
+    ll.InsertEnd(1);
+    ll.InsertEnd(2);
+    ll.InsertEnd(3);
+    ll.InsertEnd(4);
+    ll.InsertFront(5);
+    ll.InsertAfter(6, 5);
+
     ll.Display();
 
     return 0;
