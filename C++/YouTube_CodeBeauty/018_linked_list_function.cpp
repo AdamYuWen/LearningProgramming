@@ -41,5 +41,12 @@ int main() {
 
     PrintList(head);
 
+    delete head;
+    delete second;
+    delete third;
+    head = NULL;
+    second = NULL;
+    third = NULL;
+
     return 0;
 }
