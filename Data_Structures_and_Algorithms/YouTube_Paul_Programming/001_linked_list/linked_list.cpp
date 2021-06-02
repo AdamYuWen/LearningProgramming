@@ -51,6 +51,16 @@ void LinkedList::DeleteNode(int value) {
     }
 }
 
+void LinkedList::SearchRecursive(node_ptr ptr, int value) {
+    if (ptr == nullptr) {
+        std::cout << "None" << std::endl;
+    } else if (ptr->data == value) {
+        std::cout << "Found it!" << std::endl;
+    } else {
+        SearchRecursive(ptr->next, value);
+    }
+}
+
 void LinkedList::PrintLinkedList() {
     curr = head;
     std::cout << "head";

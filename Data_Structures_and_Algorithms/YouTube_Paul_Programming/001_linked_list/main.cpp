@@ -9,6 +9,8 @@ int main() {
     ll.AddNode(3);
     ll.AddNode(4);
     ll.AddNode(5);
+    ll.SearchRecursive(ll.get_head(), 3);
+    ll.SearchRecursive(ll.get_head(), 6);
     ll.PrintLinkedList();
     ll.DeleteNode(1);
     ll.PrintLinkedList();
